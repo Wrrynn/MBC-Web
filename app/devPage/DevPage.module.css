@@ -1,11 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 .container {
+    background-color: #0a0a0a;
+    color: white;
+    min-height: 100vh;
     padding: 2rem;
-    background-color: #f7f7f7;
-    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.title {
+.navbar {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    margin-bottom: 3rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.back {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.back:hover {
     color: #e63946;
+    transform: translateX(-4px);
+}
+
+.content {
+    width: 100%;
+    max-width: 800px;
+}
+
+.content section {
+    margin-bottom: 2.5rem;
+}
+
+.content h1 {
     font-size: 2rem;
-    font-weight: bold;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #4e80ee;
+    padding-bottom: 0.5rem;
+}
+
+.content h2 {
+    font-weight: 400;
+    margin: 0.3rem 0;
+    opacity: 0.9;
+}
+
+.palette {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.palette div {
+    padding: 1rem;
+    text-align: center;
+    border-radius: 10px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: default;
+}
+
+.palette div:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.15);
+}
+
+.link {
+    display: block;
+    color: #4e80ee;
+    text-decoration: underline;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.link:hover {
+    color: #e63946;
+}
+
+.socials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+    align-items: center;
+}
+
+.socials a {
+    transition: transform 0.3s ease;
+}
+
+.socials a:hover {
+    transform: scale(1.1);
 }
