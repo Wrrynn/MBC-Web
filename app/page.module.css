@@ -209,8 +209,9 @@ a.secondary {
 
 .footer .font {
   font-family: 'Poppins', sans-serif;
-  font-size: 32px;
+  font-size: 28px;
   font-weight: bold;
+  max-width: 60vw;
   margin: 10px;
 }
 
@@ -519,7 +520,6 @@ a.secondary {
   justify-content: center;
 }
 
-
 /*aurora*/
 .Aurora {
   position: absolute;
@@ -541,6 +541,8 @@ a.secondary {
   height: 100%;
 }
 
+
+/*mobie*/
 @media (max-width: 768px) {
   .halaman {
     padding: 30px 20px;
@@ -553,11 +555,19 @@ a.secondary {
     height: auto;
   }
 
-  .beranda .fuzz{
-    min-width: 60vh;
+.fuzz{
+    font-size: auto;
+  }
+
+  .beranda .hashtags{
+    text-align: center;
+    max-width: 50vw;
+    font-size: 10px;
+    line-height: 1.6;
   }
 
   .beranda .desc {
+    text-align: center;
     max-width: 50vw;
     font-size: 12px;
     line-height: 1.6;
@@ -623,6 +633,5 @@ a.secondary {
 
   .card p {
     font-size: 0.95rem;
-    text-align: justify;
   }
 }
