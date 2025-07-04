@@ -268,8 +268,8 @@ a.secondary {
 }
 
 .vimi {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
   justify-content: center;
   align-items: stretch;
@@ -278,20 +278,21 @@ a.secondary {
 
 .visi,
 .misi {
-  flex: 1 1 45%;
-  width:500px;
-  min-width: 200px;
-  padding: 10px;
+  min-width: 300px;
+  padding: 24px;
   border-radius: 16px;
   box-sizing: border-box;
-  background-color: #111;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: auto;        
 }
 
 .visi h3,
 .misi h3 {
   font-size: 22px;
-  margin-bottom: 10px;
   text-align: center;
+  margin-bottom: 10px;
 }
 
 .visi p,
@@ -544,7 +545,7 @@ a.secondary {
 
 
 /*mobie*/
-@media (max-width: 768px) {
+@media (max-width: 768spx) {
   .halaman {
     padding: 30px 20px;
   }
@@ -613,9 +614,9 @@ a.secondary {
 
   .visi,
   .misi {
-    width: 300px;
     flex: 1 1 100%;
-    padding: 16px;
+    padding: 20px;
+    height: auto;    
   }
 
   .visi h3,
