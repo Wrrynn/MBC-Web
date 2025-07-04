@@ -221,14 +221,11 @@ a.secondary {
   justify-content: center;
   text-align: center;
   align-items: center;
+  padding: 50px;
+  max-width: 800px;
   margin: 0 auto;
   height: 90vh;
   z-index: 1;
-}
-
-.beranda .fuzz {
-  width: 100%;
-  max-width: 90vw;
 }
 
 .beranda .hashtags {
@@ -241,19 +238,6 @@ a.secondary {
   line-height: 1.7;
   font-size: 18px;
   color: #ddd;
-  max-width: 800px;
-}
-
-@media (max-width: 768px) {
-  .beranda .desc {
-    font-size: 14px;
-    text-align: center;
-    padding: 0 15px;
-  }
-
-  .beranda .hashtags {
-    font-size: 12px;
-  }
 }
 
 /* tentang kami */
@@ -424,8 +408,7 @@ a.secondary {
 }
 
 .konBG {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   background-color: #1a1a1a;
   border-radius: 20px;
