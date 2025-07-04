@@ -270,36 +270,34 @@ a.secondary {
 .vimi {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  gap: 20px;
   justify-content: center;
-  gap: 90px;
+  align-items: stretch;
+  margin-top: 30px;
 }
 
 .visi,
 .misi {
-  background-color: transparent;
-  border-radius: 15px;
   flex: 1 1 45%;
-  min-width: 400px;
-  line-height: 1.7;
-  background-color: #111;
+  min-width: 280px;
+  padding: 20px;
+  border-radius: 16px;
+  box-sizing: border-box;
 }
 
 .visi h3,
 .misi h3 {
-  font-size: 28px;
+  font-size: 22px;
+  margin-bottom: 10px;
   text-align: center;
-  margin-bottom: 5px;
 }
 
 .visi p,
 .misi p,
 .misi li {
-  display: flex;
+  font-size: 16px;
+  line-height: 1.6;
   text-align: justify;
-  padding-left: 10px;
-  padding-right: 10px;
-  font-size: 18px;
 }
 
 .misi ol {
@@ -584,55 +582,48 @@ a.secondary {
 
   .tentang {
     padding: 20px;
-    max-width: 50vh;
+    width: 100%;
+    max-width: 100%;
+    display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
+    box-sizing: border-box;
     margin: auto;
   }
 
   .tentTitle {
     font-size: 24px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    text-align: center;
   }
 
   .tentDesc {
     font-size: 15px;
-    padding: 0;
-    margin: 15px 0 40px 0;
+    margin: 0 0 30px 0;
     line-height: 1.6;
-    max-width: 100%;
     text-align: justify;
   }
 
   .vimi {
-    display: flex;
     flex-direction: column;
-    align-items: stretch;
-    gap: 30px;
-    width: 100%;
+    gap: 16px;
   }
 
   .visi,
   .misi {
-    max-width: 30vh;
-    padding: 20px;
-    border-radius: 12px;
+    flex: 1 1 100%;
+    padding: 16px;
   }
 
   .visi h3,
   .misi h3 {
     font-size: 20px;
-    margin-bottom: 10px;
   }
 
   .visi p,
   .misi p,
   .misi li {
-    font-size: 15px;
-    line-height: 1.6;
-    text-align: justify;
-    padding: 0;
+    font-size: 14px;
   }
 
   .misi ol {
@@ -641,7 +632,9 @@ a.secondary {
 
   .quote {
     font-size: 14px;
-    margin-top: 10px;
+    font-style: italic;
+    margin-top: 12px;
+    color: #ccc;
   }
 
   .divisiTitle {
