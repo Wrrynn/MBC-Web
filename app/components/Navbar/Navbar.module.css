@@ -9,14 +9,16 @@
     align-items: center;
     padding: 20px 40px;
     background: rgba(13, 13, 13, 0.6);
-    /* semi-transparent */
     backdrop-filter: blur(12px);
-    /* blur efek kaca */
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     font-family: 'Poppins', sans-serif;
     transition: background 0.3s ease, backdrop-filter 0.3s ease;
     box-shadow: 4px 4px 25px rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+    z-index: 1100;
 }
 
 .navLinks {
@@ -27,16 +29,11 @@
     padding: 0;
 }
 
-.navLinks li {
-    list-style: none;
-}
-
 .navLinks li a {
     position: relative;
     text-decoration: none;
     color: #fff;
     font-weight: 500;
-    font-family: 'Poppins', sans-serif;
     padding: 5px 0;
     transition: color 0.3s ease;
 }
@@ -54,4 +51,46 @@
 
 .navLinks li a:hover::after {
     width: 100%;
+}
+
+/* Mobile styles */
+.menuIcon {
+    display: none;
+    z-index: 1100;
+    cursor: pointer;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .menuIcon {
+        display: block;
+    }
+
+    .navLinks {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background: rgba(13, 13, 13, 0.6);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        font-family: 'Poppins', sans-serif;
+        transition: background 0.3s ease, backdrop-filter 0.3s ease,transform 0.3s ease;
+        padding: 20px;
+        transform: translateY(-200%);
+        pointer-events: none;
+    }
+
+    .navLinks.active {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .navLinks li {
+        margin: 10px 0;
+        text-align: center;
+    }
 }
