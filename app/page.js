@@ -29,11 +29,13 @@ export default function Home() {
             />
           </div>
           <div className={styles.beranda} id="jembatan-glitch">
+            <div className={styles.fuzz}>
             <FuzzyCus
               baseIntensity={0.3}
               hoverIntensity={0.3}
               enableHover={true}
             />
+            </div>
             <p className={styles.hashtags}>#GoGoMBC #WeAttack #WeProtect</p>
             <p className={styles.desc}>
               MBC Laboratory merupakan sebuah Pusat Riset Teknologi dan Konsultan
