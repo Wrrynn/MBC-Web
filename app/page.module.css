@@ -279,10 +279,12 @@ a.secondary {
 .visi,
 .misi {
   flex: 1 1 45%;
-  min-width: 280px;
-  padding: 20px;
+  width:500px;
+  min-width: 200px;
+  padding: 10px;
   border-radius: 16px;
   box-sizing: border-box;
+  background-color: #111;
 }
 
 .visi h3,
@@ -611,6 +613,7 @@ a.secondary {
 
   .visi,
   .misi {
+    width: 300px;
     flex: 1 1 100%;
     padding: 16px;
   }
