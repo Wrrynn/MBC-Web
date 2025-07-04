@@ -221,7 +221,7 @@ a.secondary {
   text-align: center;
   align-items: center;
   padding: 50px;
-  max-width: 800px;
+  
   margin: 0 auto;
   height: 90vh;
   z-index: 1;
@@ -237,6 +237,7 @@ a.secondary {
   line-height: 1.7;
   font-size: 18px;
   color: #ddd;
+  max-width: 800px;
 }
 
 /* tentang kami */
