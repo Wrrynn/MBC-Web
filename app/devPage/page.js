@@ -6,7 +6,7 @@ export default function DevPage() {
     return (
         <div className={styles.container}>
             <nav className={styles.navbar}>
-                <Link href="/" className={styles.back}>← Back</Link>
+                <Link href="/" className={styles.back}>Back</Link>
                 <Image src="/img/MBC-Icon.png" alt="MBC Lab Logo" width={120} height={40} />
             </nav>
 
