@@ -75,7 +75,7 @@ export default function Home() {
                   as="text"
                   className="custom-class"
                   color="cyan"
-                  speed="30s"
+                  speed="5s"
                 >
                   <h3>Visi</h3>
                   <p>
