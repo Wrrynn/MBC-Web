@@ -272,11 +272,14 @@ export default function Orb({
     return () => {
       cancelAnimationFrame(rafId);
       window.removeEventListener("resize", resize);
-      container.removeEventListener("mousemove", handleMouseMove);
-      container.removeEventListener("mouseleave", handleMouseLeave);
-      container.removeChild(gl.canvas);
+      container?.removeEventListener("mousemove", handleMouseMove);
+      container?.removeEventListener("mouseleave", handleMouseLeave);
+      if (container?.contains(gl.canvas)) {
+        container.removeChild(gl.canvas);
+      }
       gl.getExtension("WEBGL_lose_context")?.loseContext();
     };
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [hue, hoverIntensity, rotateOnHover, forceHoverState]);
 
