@@ -209,9 +209,8 @@ a.secondary {
 }
 
 .footer .font {
-  max-width: 50vh;
   font-family: 'Poppins', sans-serif;
-  font-size: 28px;
+  font-size: 32px;
   font-weight: bold;
   margin: 10px;
 }
