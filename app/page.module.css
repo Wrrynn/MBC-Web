@@ -193,7 +193,7 @@ a.secondary {
   width: 70%;
   height: 70%;
   transform: translate(-50%, -50%);
-  z-index: -1;
+  z-index: 0;
   overflow: hidden;
 }
 
