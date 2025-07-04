@@ -172,7 +172,7 @@ a.secondary {
   max-width: auto;
   margin: 0 auto;
   min-height: 100vh;
-  background-color: #0d0d0d;
+  background-color: #0a0a0a;
   border-bottom: 2px solid #222
 }
 
@@ -357,7 +357,6 @@ a.secondary {
   width: 500px;
   height: 400px;
   overflow: hidden;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -366,6 +365,7 @@ a.secondary {
 
 .dvsGrid {
   display: flex;
+  flex: 1;
   flex-wrap: wrap;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 40px;
