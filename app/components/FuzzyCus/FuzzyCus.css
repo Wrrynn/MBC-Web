@@ -1,7 +1,9 @@
-
 #fuzzy-canvas {
-    display: block;
+    position: relative;
     max-width: 100%;
+    display: block;
+    padding: 10px;
+    margin: 0 auto;
 }
 
 canvas.blink {
@@ -12,11 +14,9 @@ canvas.blink {
     0% {
         opacity: 1;
     }
-
     50% {
         opacity: 0.2;
     }
-
     100% {
         opacity: 1;
     }
