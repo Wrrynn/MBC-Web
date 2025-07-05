@@ -22,13 +22,13 @@ export default function FuzzyText({
         {
             parts: [
                 [{ text: "We're More Than", color: "#ffffff" }],
-                [{ text: "Laboratory", color: "#E63946" }],
+                [{ text: " Laboratory", color: "#E63946" }],
             ],
         },
         {
             parts: [
                 [{ text: "We're Partners In Your", color: "#ffffff" }],
-                [{ text: "Growth", color: "#4E80EE" }],
+                [{ text: " Growth", color: "#4E80EE" }],
             ],
         },
     ];
