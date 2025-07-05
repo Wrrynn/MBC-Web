@@ -268,24 +268,26 @@ a.secondary {
 }
 
 .vimi {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  align-items: center;
+  display: flex;
   gap: 20px;
   justify-content: center;
-  align-items: stretch;
-  margin-top: 30px;
+  padding: 50px;
+  flex-wrap: wrap;
+  width: 100%;
+  box-sizing: border-box;
 }
+
 
 .visi,
 .misi {
-  min-width: 300px;
-  padding: 24px;
-  border-radius: 16px;
+  align-items: center;
+  flex: 1 1 300px;
+  width: 600px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: auto;        
+  height: auto;
 }
 
 .visi h3,
@@ -301,6 +303,7 @@ a.secondary {
   font-size: 16px;
   line-height: 1.6;
   text-align: justify;
+  white-space: normal;
 }
 
 .misi ol {
@@ -545,7 +548,7 @@ a.secondary {
 
 
 /*mobie*/
-@media (max-width: 768spx) {
+@media (max-width: 768px) {
   .halaman {
     padding: 30px 20px;
   }
@@ -607,39 +610,6 @@ a.secondary {
     text-align: justify;
   }
 
-  .vimi {
-    flex-direction: column;
-    gap: 16px;
-  }
-
-  .visi,
-  .misi {
-    flex: 1 1 100%;
-    padding: 20px;
-    height: auto;    
-  }
-
-  .visi h3,
-  .misi h3 {
-    font-size: 20px;
-  }
-
-  .visi p,
-  .misi p,
-  .misi li {
-    font-size: 14px;
-  }
-
-  .misi ol {
-    padding-left: 20px;
-  }
-
-  .quote {
-    font-size: 14px;
-    font-style: italic;
-    margin-top: 12px;
-    color: #ccc;
-  }
 
   .divisiTitle {
     font-size: 28px;
