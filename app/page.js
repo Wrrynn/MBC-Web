@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from "react";
 import Image from "next/image";
 import styles from "./page.module.css";
 import Navbar from "./components/Navbar/Navbar";
@@ -13,6 +14,27 @@ import DecryptedText from "./components/DecryptedText/DecryptedText";
 import ScrollFloat from "./components/ScrollFloat/ScrollFloat";
 
 export default function Home() {
+  const [nama, setNama] = useState('');
+  const [email, setEmail] = useState('');
+  const [pesan, setPesan] = useState('');
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const res = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ nama, email, pesan }),
+    });
+
+    const data = await res.json();
+    alert(data.message);
+
+    setNama('');
+    setEmail('');
+    setPesan('');
+  };
+
   return (
     <div>
       <Navbar />
@@ -30,11 +52,11 @@ export default function Home() {
           </div>
           <div className={styles.beranda} id="jembatan-glitch">
             <div className={styles.fuzz}>
-            <FuzzyCus
-              baseIntensity={0.3}
-              hoverIntensity={0.3}
-              enableHover={true}
-            />
+              <FuzzyCus
+                baseIntensity={0.3}
+                hoverIntensity={0.3}
+                enableHover={true}
+              />
             </div>
             <p className={styles.hashtags}>#GoGoMBC #WeAttack #WeProtect</p>
             <p className={styles.desc}>
@@ -50,15 +72,15 @@ export default function Home() {
         <section className={styles.halaman} id="informasi">
           <div className={styles.tentang}>
             <div className={styles.tentTitle}>
-            <ScrollFloat
-              animationDuration={1}
-              ease='back.inOut(2)'
-              scrollStart='center bottom+=50%'
-              scrollEnd='bottom bottom-=40%'
-              stagger={0.03}
-            >
-              Tentang Kami
-            </ScrollFloat>
+              <ScrollFloat
+                animationDuration={1}
+                ease='back.inOut(2)'
+                scrollStart='center bottom+=50%'
+                scrollEnd='bottom bottom-=40%'
+                stagger={0.03}
+              >
+                Tentang Kami
+              </ScrollFloat>
             </div>
             <p className={styles.tentDesc}>
               MBC Laboratory, singkatan dari Multimedia, Big Data, dan Cyber Security Laboratory,
@@ -212,10 +234,24 @@ export default function Home() {
                 {/* FORM */}
                 <div className={styles.contactInfo}>
                   <h3>Hubungi Kami</h3>
-                  <form className={styles.form}>
-                    <input type="text" placeholder="Nama" />
-                    <input type="email" placeholder="Email" />
-                    <textarea placeholder="Pesan" />
+                  <form className={styles.form} onSubmit={handleSubmit}>
+                    <input
+                      type="text"
+                      placeholder="Nama"
+                      value={nama}
+                      onChange={(e) => setNama(e.target.value)}
+                    />
+                    <input
+                      type="email"
+                      placeholder="Email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                    />
+                    <textarea
+                      placeholder="Pesan"
+                      value={pesan}
+                      onChange={(e) => setPesan(e.target.value)}
+                    />
                     <button type="submit">Kirim</button>
                   </form>
 
