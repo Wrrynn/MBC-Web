@@ -1,8 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌐 Website Laboratorium MBC - Next.js + Vercel
 
-## Getting Started
+Ini adalah proyek website resmi Laboratorium MBC yang dibangun menggunakan [Next.js](https://nextjs.org/) dan di-deploy menggunakan [Vercel](https://vercel.com/).
 
-First, run the development server:
+---
+```
+📁 Struktur Proyek
+
+├── .next/ # Direktori build otomatis oleh Next.js
+├── app/ # Folder utama aplikasi
+│ ├── api/ # API routes menggunakan Next.js API
+│ ├── components/ # Komponen UI reusable
+│ ├── devPage/ # Halaman atau komponen untuk identitas developer
+│ ├── fonts/ # File font kustom
+│ ├── favicon.ico # Ikon website
+│ ├── globals.css # Styling global
+│ ├── layout.js # Layout utama aplikasi
+│ ├── page.js # Entry point halaman utama
+│ ├── page.module.css # Styling modular untuk halaman
+├── node_modules/ # Dependensi node
+├── public/ # Aset publik (gambar, file statis, dll)
+├── .gitignore # File untuk mengecualikan file dari Git
+├── jsconfig.json # Konfigurasi path dan IntelliSense untuk JavaScript
+├── next.config.mjs # Konfigurasi Next.js
+├── package-lock.json # Lockfile npm
+├── package.json # Informasi proyek dan dependensi
+└── README.md # Dokumentasi proyek
+```
+
+## 🚀 Instalasi Lokal
+
+Ikuti langkah berikut untuk menjalankan proyek secara lokal:
+
+1. **Clone repositori:**
+
+   ```bash
+   git clone https://github.com/username/mbc-lab-web.git
+   cd mbc-lab-web
+   ```
+
+2. **Install Dependensi:**
+
+```bash
+npm install
+```
+
+3. **Jalankan Server:** 
 
 ```bash
 npm run dev
@@ -14,23 +56,38 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. **Buka aplikasi**
+buka [http://localhost:3000](http://localhost:3000) dengan browser untuk menampilkan hasil.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Deployment
+Deployment dilakukan dengan menggunakan vercel dengan bantuan GitHub, pastikan:
+- File next.config.mjs telah dikonfigurasi dengan benar untuk kebutuhan produksi.
+- Semua aset statis ada di folder public/.
 
-## Learn More
+## Vercel:
+Cara melakukan deploy dengan vercel yaitu:
+1. push project ke GitHub
+2. Login ke [vercel](https://vercel.com/) menggunakan akun GitHub
+3. Impor repository yang ingin di deploy dan sesuaikan konfigurasi 
 
-To learn more about Next.js, take a look at the following resources:
+## Konfigurasi SSL (HTTPS) di Vercel
+Dengan melakukan deploy proyek ke vercel maka Vercel akan otomatis mengkonfigurasi SSL/TLS untuk domain tersebut.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Back-End
+Proyek ini menggunakan API route Next.js untuk menangani form kontak yang dikirim dari frontend.
+File API terdapat di:
+```bash
+app/api/kontak/route.js
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Cara Kerja:
+1. API Menerima request POST dari form kontak.
+2. API Mengecek apakah nama, email, dan pesan terisi.
+3. Jika valid, data akan disimpan (sementara) dengan console.log(...)
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Author
+I Made Dwi Wiryawan Raditya
+103012300142
+Informatika(2023)
+---
