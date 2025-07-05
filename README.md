@@ -1,10 +1,10 @@
-# 🌐 Website Laboratorium MBC - Next.js + Vercel
+# Website MBC Lab - Next.js + Vercel
 
-Ini adalah proyek website resmi Laboratorium MBC yang dibangun menggunakan [Next.js](https://nextjs.org/) dan di-deploy menggunakan [Vercel](https://vercel.com/).
+Ini adalah proyek website MBC Lab yang dibangun menggunakan [Next.js](https://nextjs.org/) dan di-deploy menggunakan [Vercel](https://vercel.com/).
 
 ---
 ```
-📁 Struktur Proyek
+Struktur Proyek
 
 ├── .next/ # Direktori build otomatis oleh Next.js
 ├── app/ # Folder utama aplikasi
@@ -27,7 +27,7 @@ Ini adalah proyek website resmi Laboratorium MBC yang dibangun menggunakan [Next
 └── README.md # Dokumentasi proyek
 ```
 
-## 🚀 Instalasi Lokal
+## Instalasi Lokal
 
 Ikuti langkah berikut untuk menjalankan proyek secara lokal:
 
@@ -87,7 +87,7 @@ Cara Kerja:
 3. Jika valid, data akan disimpan (sementara) dengan console.log(...)
 
 ## Author
-I Made Dwi Wiryawan Raditya
-103012300142
+I Made Dwi Wiryawan Raditya<br>
+103012300142<br>
 Informatika(2023)
 ---
