@@ -147,6 +147,7 @@ export default function Home() {
                 />
               </div>
             </div>
+
             <div className={styles.dvsGrid}>
               <div className={styles.dvsItem}>
                 <div className={styles.background}>
@@ -206,8 +207,6 @@ export default function Home() {
                   </p>
                 </div>
               </div>
-
-
             </div>
           </div>
         </section>
